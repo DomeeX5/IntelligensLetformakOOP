@@ -16,7 +16,6 @@ namespace IntelligensLetformakOOP
             do
             {
                 Console.WriteLine("0: kilépés\t1: Parrot\t2: Dulltherapist\t3: LazyTherapist");
-                menu = Console.ReadLine();
                 while (menu == "" && menu != "0" || menu != "1" || menu != "2" || menu != "3")
                 {
                     menu = Console.ReadLine();
@@ -34,7 +33,15 @@ namespace IntelligensLetformakOOP
                                     Console.Write("Te: ");
                                     kerdes = Console.ReadLine();
                                 }
-                                parrot.Valaszol(kerdes);
+                                if (kerdes == "vége")
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("0: kilépés\t1: Parrot\t2: Dulltherapist\t3: LazyTherapist");
+                                }
+                                else
+                                {
+									parrot.Valaszol(kerdes);
+								}
                             } while (kerdes != "vége");
                             break;
 
@@ -50,7 +57,15 @@ namespace IntelligensLetformakOOP
                                     Console.Write("Te: ");
                                     kerdes = Console.ReadLine();
                                 }
-                                dt.Valaszol(kerdes);
+								if (kerdes == "vége")
+								{
+									Console.Clear();
+									Console.WriteLine("0: kilépés\t1: Parrot\t2: Dulltherapist\t3: LazyTherapist");
+								}
+								else
+								{
+									dt.Valaszol(kerdes);
+								}
                             } while (kerdes != "vége");
                             break;
 
@@ -66,7 +81,15 @@ namespace IntelligensLetformakOOP
                                     Console.Write("Te: ");
                                     kerdes = Console.ReadLine();
                                 }
-                                lazy.Valaszol(kerdes);
+								if (kerdes == "vége")
+								{
+									Console.Clear();
+									Console.WriteLine("0: kilépés\t1: Parrot\t2: Dulltherapist\t3: LazyTherapist");
+								}
+								else
+								{
+									lazy.Valaszol(kerdes);
+								}
                             } while (kerdes != "vége");
                             break;
                     }
